@@ -1,0 +1,48 @@
+# Virtual Environments
+venv/
+venv*/
+env/
+.venv/
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environment Variables & Secrets
+.env
+.env.*
+*.env
+credentials.json
+secrets.yaml
+
+# ChromaDB & Local Persistence
+chroma_db/
+chroma/
+*.sqlite3
+*.db
+
+# Temporary & Output Files
+*.pptx
+!assets/*.pptx
+scanned_research_paper.pdf
+test_*.pdf
+blank_*.pdf
+temp_*
+tmp/
+*.tmp
+
+# Operating System & IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Distribution / Packaging
+build/
+dist/
+*.egg-info/
