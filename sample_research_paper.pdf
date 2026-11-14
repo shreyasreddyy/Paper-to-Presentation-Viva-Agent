@@ -1,0 +1,105 @@
+%PDF-1.4
+1 0 obj
+<</Type /Catalog /Pages 2 0 R>>
+endobj
+2 0 obj
+<</Type /Pages /Kids [3 0 R 5 0 R 7 0 R] /Count 3>>
+endobj
+3 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources <</Font <</F1 9 0 R>>>> /Contents 4 0 R>>
+endobj
+4 0 obj
+<</Length 1448>>
+stream
+BT
+/F1 11 Tf
+50 720 Td
+(DeepResidualAttention: Enhanced Multi-Scale Representations in Deep Vision Models) Tj
+0 -18 Td (Authors: Dr. Elena Vance and Prof. Marcus Chen) Tj
+0 -18 Td (Abstract: Recent convolutional and vision transformer architectures demonstrate notable achievements) Tj
+0 -18 Td (in visual recognition. However, multi-scale feature degradation remains a critical challenge.) Tj
+0 -18 Td (We propose DeepResidualAttention [DRA], a novel hierarchical attention mechanism that dynamically) Tj
+0 -18 Td (balances spatial and channel-wise feature dependencies across distinct resolution scales.) Tj
+0 -18 Td (Our empirical evaluations on ImageNet-1K demonstrate that DRA achieves a top-1 accuracy improvement) Tj
+0 -18 Td (of 2.4 percent over ResNet-50 and 1.8 percent over Swin-T while reducing parameter count by 14.3 percent.) Tj
+0 -18 Td (1. Introduction and Research Problem:) Tj
+0 -18 Td (Deep residual networks rely on identity shortcut connections to alleviate gradient vanishing.) Tj
+0 -18 Td (Despite their success, deep features suffer from semantic attenuation as network depth scales.) Tj
+0 -18 Td (Existing spatial attention mechanisms often fail to capture long-range contextual relationships) Tj
+0 -18 Td (without introducing quadratic computational overhead. The primary research challenge is formulating) Tj
+0 -18 Td (a multi-scale attention weighting function that balances efficiency with representation power.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources <</Font <</F1 9 0 R>>>> /Contents 6 0 R>>
+endobj
+6 0 obj
+<</Length 1061>>
+stream
+BT
+/F1 11 Tf
+50 720 Td
+(2. Proposed Methodology and Architecture:) Tj
+0 -18 Td (The DRA architecture introduces three core stages:) Tj
+0 -18 Td (1. Multi-Resolution Feature Pyramid Decomposition: The input tensor is decomposed into four stages.) Tj
+0 -18 Td (2. Cross-Scale Residual Gating: Each stage communicates through a bidirectional residual highway) Tj
+0 -18 Td (transferring high-frequency gradient signals to coarser semantic levels.) Tj
+0 -18 Td (3. Decoupled Spatial-Channel Attention Modules: We decouple spatial attention computation) Tj
+0 -18 Td (from channel pooling, reducing complexity from O[N^2] to O[N].) Tj
+0 -18 Td (We formulate the attention gating mechanism as:) Tj
+0 -18 Td (A[X] = sigma[ W2 * GELU[ W1 * Pool[X] ] ]) Tj
+0 -18 Td (where X represents the input feature tensor, W1 and W2 denote down-projection and up-projection) Tj
+0 -18 Td (parameter matrices, and sigma denotes the sigmoid gating function. This formulation ensures that) Tj
+0 -18 Td (high-resolution spatial details are retained across all convolutional stages.) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources <</Font <</F1 9 0 R>>>> /Contents 8 0 R>>
+endobj
+8 0 obj
+<</Length 1467>>
+stream
+BT
+/F1 11 Tf
+50 720 Td
+(3. Experimental Setup and Quantitative Results:) Tj
+0 -18 Td (We evaluate DRA on ImageNet-1K [1.28 million training images, 50,000 validation images] and MS-COCO.) Tj
+0 -18 Td (Models are trained using AdamW optimizer with initial learning rate of 1e-4, cosine annealing) Tj
+0 -18 Td (over 300 epochs, batch size 256, and weight decay 0.05 on 8 NVIDIA A100 GPUs.) Tj
+0 -18 Td (Benchmark Comparison on ImageNet-1K:) Tj
+0 -18 Td (- ResNet-50 Baseline: 76.1 percent Top-1 Accuracy, 25.6M Parameters, 4.1 GFLOPs.) Tj
+0 -18 Td (- Swin-T Baseline: 81.3 percent Top-1 Accuracy, 28.3M Parameters, 4.5 GFLOPs.) Tj
+0 -18 Td (- DRA [Proposed]: 83.1 percent Top-1 Accuracy, 24.2M Parameters, 3.9 GFLOPs.) Tj
+0 -18 Td (Ablation Studies:) Tj
+0 -18 Td (Removing cross-scale residual highway causes an immediate 1.7 percent drop in Top-1 accuracy,) Tj
+0 -18 Td (proving that inter-stage gradient communication is pivotal.) Tj
+0 -18 Td (4. Limitations and Threats to Validity:) Tj
+0 -18 Td (Although DRA reduces parameter count and FLOPs, memory footprint during training is approximately) Tj
+0 -18 Td (11 percent higher due to caching intermediate activation maps for cross-scale gating.) Tj
+0 -18 Td (5. Conclusion:) Tj
+0 -18 Td (DeepResidualAttention establishes that decoupled cross-scale attention gating achieves state-of-the-art) Tj
+0 -18 Td (accuracy with improved parameter efficiency. Future work will investigate edge deployment quantization.) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Font /Subtype /Type1 /BaseFont /Helvetica>>
+endobj
+xref
+0 10
+0000000000 65535 f 
+0000000009 00000 n 
+0000000056 00000 n 
+0000000123 00000 n 
+0000000243 00000 n 
+0000001741 00000 n 
+0000001861 00000 n 
+0000002972 00000 n 
+0000003092 00000 n 
+0000004609 00000 n 
+trailer <</Size 10 /Root 1 0 R>>
+startxref
+4677
+%%EOF
